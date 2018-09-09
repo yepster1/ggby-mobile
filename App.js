@@ -1,10 +1,10 @@
-import React from 'react';
-import { createStore } from 'redux';
-import rootReducer from 'domain';
+// @flow
+import React from "react";
+import { createStore } from "redux";
+import rootReducer from "domain";
 
-import { StyleSheet, Text, View } from 'react-native';
-import { Provider, connect } from 'react-redux';
-import RootNavigator from 'features/rootNavigator';
+import { Provider } from "react-redux";
+import RootNavigator from "features/rootNavigator";
 
 const store = createStore(rootReducer);
 

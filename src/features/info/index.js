@@ -1,62 +1,62 @@
-import React from 'react';
-import { reduce } from 'ramda';
+import React from "react";
+import { reduce } from "ramda";
 
-import { View, Text } from 'react-native';
-import { SafeAreaView, createMaterialTopTabNavigator } from 'react-navigation';
-import { Constants } from 'expo';
+import { View, Text } from "react-native";
+import { createMaterialTopTabNavigator } from "react-navigation";
+import { Constants } from "expo";
 
-const InfoScreen = (props) => {
-  return (
-    <View>
-      <Text>
-        This is the info screen. Trying something here.
-      </Text>
-    </View>
-  )
-};
+const InfoScreen = () => (
+  <View>
+    <Text>This is the info screen. Trying something here.</Text>
+  </View>
+);
 
 const tabs = [
   {
-    routeName: 'Part 1',
+    routeName: "Part 1",
     route: {
-      screen: InfoScreen,
+      screen: InfoScreen
     }
   },
   {
-    routeName: 'Part 2',
+    routeName: "Part 2",
     route: {
-      screen: InfoScreen,
+      screen: InfoScreen
     }
   },
   {
-    routeName: 'Part 3',
+    routeName: "Part 3",
     route: {
-      screen: InfoScreen,
+      screen: InfoScreen
     }
   },
   {
-    routeName: 'Part 4',
+    routeName: "Part 4",
     route: {
-      screen: InfoScreen,
+      screen: InfoScreen
     }
   },
   {
-    routeName: 'Part 5',
+    routeName: "Part 5",
     route: {
-      screen: InfoScreen,
+      screen: InfoScreen
     }
   },
   {
-    routeName: 'Part 6',
+    routeName: "Part 6",
     route: {
-      screen: InfoScreen,
+      screen: InfoScreen
     }
-  },
+  }
 ];
 
 const InfoTab = () => {
-  const routes = reduce((acc, item) => ({ ...acc, [item.routeName]: item.route }), {}, tabs);
-  const Tabs =  createMaterialTopTabNavigator(routes, {
+  const routes = reduce(
+    (acc, item) => ({ ...acc, [item.routeName]: item.route }),
+    {},
+    tabs
+  );
+  const Tabs = createMaterialTopTabNavigator(routes, {
     tabBarOptions: {
       scrollEnabled: true,
       tabStyle: {

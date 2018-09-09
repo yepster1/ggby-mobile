@@ -1,6 +1,6 @@
-import { createAction, handleActions } from 'redux-actions';
+import { handleActions } from "redux-actions";
 
-const initialState = { entities: [{ name: 'A cool event' }] };
+const initialState = { entities: [{ name: "A cool event" }] };
 
 // CREATE REDUCER
 
@@ -8,7 +8,7 @@ const reducer = handleActions(
   {
     // TODO: Implement
   },
-  initialState,
+  initialState
 );
 
 // CREATE SELECTOR

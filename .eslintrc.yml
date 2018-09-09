@@ -1,0 +1,24 @@
+---
+  parser: "babel-eslint"
+
+  plugins:
+    - "prettier"
+
+  globals:
+    "fetch": true
+
+  extends:
+    - "airbnb"
+    - "prettier"
+    - "prettier/flowtype"
+    - "prettier/react"
+
+  settings:
+    import/resolver: "babel-module"
+
+  rules:
+    react/jsx-filename-extension: [1, { "extensions": [".js", ".jsx"] }]
+    react/prefer-stateless-function: 0
+
+  env:
+    browser: true
