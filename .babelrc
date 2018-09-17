@@ -5,7 +5,7 @@
       "plugins": [
         "transform-react-jsx-source",
         ["module-resolver", {
-          "root": ["./src"],
+          "root": ["./src", "./assets"],
         }],
       ]
     }

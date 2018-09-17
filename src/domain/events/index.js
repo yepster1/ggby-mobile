@@ -1,17 +1,18 @@
 import { handleActions } from "redux-actions";
+import bundledEvents from "json/events.json";
 
-const initialState = { entities: [{ name: "A cool event" }] };
-
-// CREATE REDUCER
+// REDUCER
 
 const reducer = handleActions(
   {
-    // TODO: Implement
+    // TODO: Implement. In the future, we will need actions/reducers like
+    // SET_EVENTS, UPDATE_EVENT, etc. For now, we are simply pulling in bundled
+    // json data and setting as the inital state.
   },
-  initialState
+  bundledEvents
 );
 
-// CREATE SELECTOR
+// SELECTORS
 
 const selectEvents = state => state.events.entities;
 
@@ -19,4 +20,4 @@ const selectEvents = state => state.events.entities;
 
 export default reducer;
 
-export { selectEvents, initialState };
+export { selectEvents };
