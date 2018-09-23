@@ -6,6 +6,7 @@ import {
 } from "react-navigation";
 
 import { View, Text } from "react-native";
+import Schedule from "features/schedule";
 import Info from "features/info";
 
 // NOTE: If the RootNavigator get any more complex (i.e.  accounts/registration
@@ -13,17 +14,19 @@ import Info from "features/info";
 // now, the RootNavigator below is pretty much just providing a header.
 
 const ApplicationNavigator = createBottomTabNavigator({
-  Schedule: () => (
-    <View>
-      <Text>Schedule</Text>
-    </View>
-  ),
-  Map: () => (
-    <View>
-      <Text>Map</Text>
-    </View>
-  ),
-  Info
+  Schedule: {
+    screen: Schedule
+  },
+  Map: {
+    screen: () => (
+      <View>
+        <Text>Map</Text>
+      </View>
+    )
+  },
+  Info: {
+    screen: Info
+  }
 });
 
 const RootNavigator = createStackNavigator(
