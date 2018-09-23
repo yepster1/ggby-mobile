@@ -5,6 +5,7 @@ import { selectEvents } from "domain/events";
 import ScheduleView from "./ScheduleView";
 
 class ScheduleContainer extends React.Component {
+  // TODO: Figure out if this is necessary.
   onEventPress = event => {
     const { navigation } = this.props;
     navigation.navigate("EventDetails", { id: event.id });

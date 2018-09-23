@@ -3,6 +3,10 @@ import moment from "moment";
 import { groupBy, map, keys } from "ramda";
 
 import { View, Text, SectionList } from "react-native";
+import { Ionicons as Icon } from "@expo/vector-icons";
+import EventItemView from "./EventItemView";
+
+import styles from "./ScheduleView.style";
 
 const mockEventTimes = event => {
   let seedTime = moment();
@@ -19,12 +23,19 @@ const mockEventTimes = event => {
 };
 
 class ScheduleView extends React.Component {
-  keyExtractor = ({ id }) => id;
+  keyExtractor = ({ id }) => id.toString();
 
-  renderSectionHeader = ({ section: { title } }) => <Text>{title}</Text>;
+  renderSectionHeader = ({ section: { title } }) => (
+    <View style={styles.sectionHeaderContainer}>
+      <Text style={styles.secondaryText}>{title}</Text>
+    </View>
+  );
 
-  renderEventItem = ({ item }) => <Text>{item.name}</Text>;
+  renderEventItem = ({ item: event }) => <EventItemView event={event} />;
 
+  // TODO: Performance was shit on iOS X but fine otherwise -- may need to have
+  // someone else check as well to see if this is an issue that needs
+  // addressing. Also need to test with production version.
   render() {
     const { events } = this.props;
 
@@ -34,17 +45,19 @@ class ScheduleView extends React.Component {
     const groupedEvents = groupBy(groupByDate, map(mockEventTimes, events));
 
     const sectionListData = map(
-      title => ({ title, data: groupedEvents[title] }),
+      title => ({
+        title,
+        key: title,
+        data: map(item => ({ ...item }), groupedEvents[title])
+      }),
       keys(groupedEvents)
     );
 
     return (
-      <View>
-        <Text>Schedule test</Text>
-
+      <View style={styles.screen}>
         <SectionList
-          keyExtractor={this.keyExtractor}
           sections={sectionListData}
+          keyExtractor={this.keyExtractor}
           renderSectionHeader={this.renderSectionHeader}
           renderItem={this.renderEventItem}
         />
