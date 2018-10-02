@@ -7,19 +7,9 @@ import { Ionicons as Icon } from "@expo/vector-icons";
 import styles from "./EventItemView.style";
 
 export default class EventItemView extends React.Component {
-  state = {
-    hasReminder: false
-  };
-
-  onReminderIconPress = () => {
-    const { hasReminder } = this.state;
-    this.setState({ hasReminder: !hasReminder });
-  };
-
   render() {
-    const { event } = this.props;
+    const { event, hasReminder, onReminderIconPress } = this.props;
     const { name, startAt, endAt } = event;
-    const { hasReminder } = this.state;
 
     return (
       <View style={styles.eventItemContainer}>
@@ -42,7 +32,7 @@ export default class EventItemView extends React.Component {
 
         <View style={styles.rightEventItemSection}>
           <Icon
-            onPress={this.onReminderIconPress}
+            onPress={onReminderIconPress}
             style={[
               styles.reminderIcon,
               hasReminder && styles.activeReminderIcon

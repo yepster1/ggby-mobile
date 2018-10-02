@@ -13,21 +13,24 @@ import Info from "features/info";
 // features) we'll probably want to move this into its own feature dir. For
 // now, the RootNavigator below is pretty much just providing a header.
 
-const ApplicationNavigator = createBottomTabNavigator({
-  Schedule: {
-    screen: Schedule
+const ApplicationNavigator = createBottomTabNavigator(
+  {
+    Schedule: {
+      screen: Schedule
+    },
+    Map: {
+      screen: () => (
+        <View>
+          <Text>Map</Text>
+        </View>
+      )
+    },
+    Info: {
+      screen: Info
+    }
   },
-  Map: {
-    screen: () => (
-      <View>
-        <Text>Map</Text>
-      </View>
-    )
-  },
-  Info: {
-    screen: Info
-  }
-});
+  {}
+);
 
 const RootNavigator = createStackNavigator(
   {
