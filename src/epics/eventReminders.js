@@ -77,6 +77,8 @@ const scheduleEventReminderEpic = action$ =>
     })
   );
 
+// TODO: This can be done in more idiomatic, rxjs-y way but going to put it down
+// for now :[.
 const cancelEventReminderEpic = (action$, state$) =>
   action$.pipe(
     ofType(cancelEventReminder.toString()),
