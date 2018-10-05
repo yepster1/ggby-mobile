@@ -1,9 +1,11 @@
 import { combineEpics, ofType } from "redux-observable";
 import { createAction } from "redux-actions";
-import { Permissions, Notifications } from "expo";
-import { empty, from, of } from "rxjs";
-import { mergeMap, map, tap } from "rxjs/operators";
+import { empty, from, merge, of } from "rxjs";
+import { mergeMap, map, filter, share } from "rxjs/operators";
 import moment from "moment";
+
+import { Alert } from "react-native";
+import { Permissions, Notifications } from "expo";
 
 import {
   saveEventReminder,
@@ -25,24 +27,44 @@ const scheduleEventReminderEpic = action$ =>
   action$.pipe(
     ofType(scheduleEventReminder.toString()),
     mergeMap(({ payload: event }) => {
-      const test = from(Permissions.getAsync(Permissions.NOTIFICATIONS)).pipe(
-        mergeMap(permission => {
-          const { status } = permission;
-          return status !== "granted"
-            ? from(Permissions.askAsync(Permissions.NOTIFICATIONS))
-            : of(permission);
+      const getPermission$ = from(
+        Permissions.getAsync(Permissions.NOTIFICATIONS)
+      ).pipe(
+        mergeMap(perm => {
+          if (perm.status === "granted") return of(perm);
+          return from(Permissions.askAsync(Permissions.NOTIFICATIONS));
         }),
-        mergeMap(permission =>
+        share()
+      );
+
+      const handleNoPerm$ = getPermission$.pipe(
+        filter(({ status }) => status !== "granted"),
+        mergeMap(() => {
+          // TODO: Move static text content into i18n lib
+          Alert.alert(
+            "Ohs Noes!!",
+            "We can't notify you without permission. Please slide into your " +
+              "settings and flip that shit to the right. 😜🙏👽 Raaage oooon!"
+          );
+
+          return empty();
+        })
+      );
+
+      const scheduleReminder$ = getPermission$.pipe(
+        filter(({ status }) => status === "granted"),
+        mergeMap(() =>
           from(
+            // TODO: Move static text content into i18n lib
             Notifications.scheduleLocalNotificationAsync(
               {
-                title: "Test notification",
-                body: "Test body",
+                title: "Put down that splif!",
+                body: `You've got 30 minutes till ${event.name}.`,
                 ios: { sound: true }
               },
               {
-                time: moment()
-                  .add("20", "seconds")
+                time: moment(event.startAt)
+                  .subtract("30", "minutes")
                   .valueOf() // unix timestamp in ms
               }
             )
@@ -51,7 +73,7 @@ const scheduleEventReminderEpic = action$ =>
         map(notificationId => saveEventReminder(event.id, notificationId))
       );
 
-      return test;
+      return merge(handleNoPerm$, scheduleReminder$);
     })
   );
 
