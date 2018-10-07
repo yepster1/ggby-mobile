@@ -3,8 +3,7 @@ import moment from "moment";
 import { groupBy, map, keys } from "ramda";
 
 import { View, Text, SectionList } from "react-native";
-import { Ionicons as Icon } from "@expo/vector-icons";
-import EventItemView from "./EventItemView";
+import EventItemContainer from "./EventItemContainer";
 
 import styles from "./ScheduleView.style";
 
@@ -22,7 +21,7 @@ const mockEventTimes = event => {
   };
 };
 
-class ScheduleView extends React.Component {
+class ScheduleView extends React.PureComponent {
   keyExtractor = ({ id }) => id.toString();
 
   renderSectionHeader = ({ section: { title } }) => (
@@ -31,7 +30,7 @@ class ScheduleView extends React.Component {
     </View>
   );
 
-  renderEventItem = ({ item: event }) => <EventItemView event={event} />;
+  renderEventItem = ({ item: event }) => <EventItemContainer event={event} />;
 
   // TODO: Performance was shit on iOS X but fine otherwise -- may need to have
   // someone else check as well to see if this is an issue that needs
