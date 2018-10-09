@@ -4,19 +4,19 @@ import { createStackNavigator } from "react-navigation";
 import { View, Text } from "react-native";
 import defaultStackNavigatorConfigs from "components/navigator";
 
-const InfoScreen = () => (
+const Map = () => (
   <View>
-    <Text>This is the info screen. Trying something here.</Text>
+    <Text>Map goes here</Text>
   </View>
 );
 
-const InfoNavigator = createStackNavigator(
+const MapNavigator = createStackNavigator(
   {
-    Info: {
-      screen: InfoScreen
+    Map: {
+      screen: Map
     }
   },
   defaultStackNavigatorConfigs
 );
 
-export default InfoNavigator;
+export default MapNavigator;

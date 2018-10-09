@@ -1,3 +1,3 @@
-import ScheduleContainer from "./ScheduleContainer";
+import ScheduleNavigator from "./ScheduleNavigator";
 
-export default ScheduleContainer;
+export default ScheduleNavigator;
