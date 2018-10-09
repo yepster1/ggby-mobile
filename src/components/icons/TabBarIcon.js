@@ -1,16 +1,18 @@
-import React from 'react';
-import { Icon } from 'expo';
+import React from "react";
+import { Icon } from "expo";
 
 import * as v from "theme/variables";
 
 export default class TabBarIcon extends React.Component {
   render() {
+    const { name, focused } = this.props;
+
     return (
       <Icon.MaterialCommunityIcons
-        name={this.props.name}
+        name={name}
         size={26}
         style={{ marginBottom: -3 }}
-        color={this.props.focused ? v.TAB_ICON_SELECTED : v.TAB_ICON_DEFAULT}
+        color={focused ? v.TAB_ICON_SELECTED : v.TAB_ICON_DEFAULT}
       />
     );
   }
