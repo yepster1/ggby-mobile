@@ -8,7 +8,8 @@ export default {
   headerLayoutPreset: "left",
   navigationOptions: {
     headerStyle: {
-      backgroundColor: v.DARK_BACKGROUND_COLOR
+      backgroundColor: v.DARK_BACKGROUND_COLOR,
+      borderBottomWidth: 0
     },
     headerTitle: () => (
       <Image

@@ -1,7 +1,7 @@
 import React from "react";
 
-import { createStackNavigator } from "react-navigation";
 import { View, Text } from "react-native";
+import { createStackNavigator } from "react-navigation";
 import defaultStackNavigatorConfigs from "components/navigator";
 
 const Map = () => (

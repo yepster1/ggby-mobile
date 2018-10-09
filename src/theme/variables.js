@@ -8,7 +8,7 @@ export const WHITE = "#FFFFFF";
 export const GREY = "#252A33";
 export const DARK_GREY = "#231F20";
 export const LIGHT_GREY = "#969696";
-export const RED = "#EA4A5B";
+export const RED = "#EC4858";
 export const BLUE = "#2F95DC";
 export const DARK_BLUE = "#252A33";
 export const LIGHT_DARK_BLUE = "#474C57";
@@ -16,6 +16,7 @@ export const LIGHT_DARK_BLUE = "#474C57";
 export const BACKGROUND_COLOR = GREY;
 export const DARK_BACKGROUND_COLOR = DARK_BLUE;
 export const SECONDARY_DARK_BACKGROUND_COLOR = LIGHT_DARK_BLUE;
+export const ACCENT_COLOR = RED;
 
 export const TAB_ICON_DEFAULT = GREY;
 export const TAB_ICON_SELECTED = BLUE;
