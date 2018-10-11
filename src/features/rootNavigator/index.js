@@ -7,6 +7,7 @@ import Map from "features/map";
 import Info from "features/info";
 
 import TabBarIcon from "components/icons";
+import * as v from "theme/variables";
 
 // NOTE: If the RootNavigator get any more complex (i.e.  accounts/registration
 // features) we'll probably want to move this into its own feature dir. For
@@ -33,14 +34,23 @@ const RootNavigator = createBottomTabNavigator(
     Info: {
       screen: Info,
       navigationOptions: {
-        tabBarLabel: "Info",
+        tabBarLabel: "Beta",
         tabBarIcon: ({ focused }) => (
           <TabBarIcon focused={focused} name="beta" />
         )
       }
     }
   },
-  {}
+  {
+    tabBarOptions: {
+      style: {
+        backgroundColor: v.DARK_BACKGROUND_COLOR,
+        alignItems: "flex-end"
+      },
+      inactiveTintColor: v.WHITE,
+      activeTintColor: v.ACCENT_COLOR
+    }
+  }
 );
 
 export default RootNavigator;

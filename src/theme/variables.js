@@ -18,8 +18,8 @@ export const DARK_BACKGROUND_COLOR = DARK_BLUE;
 export const SECONDARY_DARK_BACKGROUND_COLOR = LIGHT_DARK_BLUE;
 export const ACCENT_COLOR = RED;
 
-export const TAB_ICON_DEFAULT = GREY;
-export const TAB_ICON_SELECTED = BLUE;
+export const TAB_ICON_DEFAULT = WHITE;
+export const TAB_ICON_SELECTED = ACCENT_COLOR;
 
 // Typography
 
