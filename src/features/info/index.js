@@ -1,9 +1,8 @@
 import React from "react";
-import { reduce } from "ramda";
 
+import { createStackNavigator } from "react-navigation";
 import { View, Text } from "react-native";
-import { createMaterialTopTabNavigator } from "react-navigation";
-import { Constants } from "expo";
+import defaultStackNavigatorConfigs from "components/navigator";
 
 const InfoScreen = () => (
   <View>
@@ -11,60 +10,13 @@ const InfoScreen = () => (
   </View>
 );
 
-const tabs = [
+const InfoNavigator = createStackNavigator(
   {
-    routeName: "Part 1",
-    route: {
+    Info: {
       screen: InfoScreen
     }
   },
-  {
-    routeName: "Part 2",
-    route: {
-      screen: InfoScreen
-    }
-  },
-  {
-    routeName: "Part 3",
-    route: {
-      screen: InfoScreen
-    }
-  },
-  {
-    routeName: "Part 4",
-    route: {
-      screen: InfoScreen
-    }
-  },
-  {
-    routeName: "Part 5",
-    route: {
-      screen: InfoScreen
-    }
-  },
-  {
-    routeName: "Part 6",
-    route: {
-      screen: InfoScreen
-    }
-  }
-];
+  defaultStackNavigatorConfigs
+);
 
-const InfoTab = () => {
-  const routes = reduce(
-    (acc, item) => ({ ...acc, [item.routeName]: item.route }),
-    {},
-    tabs
-  );
-  const Tabs = createMaterialTopTabNavigator(routes, {
-    tabBarOptions: {
-      scrollEnabled: true,
-      tabStyle: {
-        marginTop: Constants.statusBarHeight
-      }
-    }
-  });
-  return <Tabs />;
-};
-
-export default InfoTab;
+export default InfoNavigator;
