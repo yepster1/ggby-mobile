@@ -3,6 +3,7 @@ import moment from "moment";
 import { groupBy, map, keys } from "ramda";
 
 import { View, Text, SectionList } from "react-native";
+import { BlurView } from "expo";
 import EventItemContainer from "./EventItemContainer";
 
 import styles from "./ScheduleView.style";
@@ -25,9 +26,9 @@ class ScheduleView extends React.PureComponent {
   keyExtractor = ({ id }) => id.toString();
 
   renderSectionHeader = ({ section: { title } }) => (
-    <View style={styles.sectionHeaderContainer}>
-      <Text style={styles.secondaryText}>{title}</Text>
-    </View>
+    <BlurView tint="light" intensity={80} style={styles.sectionHeaderContainer}>
+      <Text style={styles.sectionTitleText}>{title}</Text>
+    </BlurView>
   );
 
   renderEventItem = ({ item: event }) => <EventItemContainer event={event} />;

@@ -5,10 +5,9 @@ export default StyleSheet.create({
   eventItemContainer: {
     backgroundColor: v.BACKGROUND_COLOR,
     flexDirection: "row",
-    marginHorizontal: v.BASE_VALUE,
-    marginVertical: v.BASE_VALUE / 2,
     borderRadius: v.BASE_VALUE,
-    padding: v.BASE_VALUE
+    paddingVertical: v.BASE_VALUE / 2,
+    paddingHorizontal: v.BASE_VALUE
   },
 
   leftEventItemSection: {
@@ -26,14 +25,14 @@ export default StyleSheet.create({
 
   rightEventItemSection: {
     flex: 0,
-    marginRight: v.BASE_VALUE,
-    justifyContent: "flex-start",
+    justifyContent: "center",
     alignItems: "center"
   },
 
   reminderIcon: {
     color: v.PRIMARY_TEXT_COLOR,
-    fontSize: v.NORMAL_FONT_SIZE * 2
+    fontSize: v.NORMAL_FONT_SIZE * 2,
+    padding: v.BASE_VALUE
   },
 
   activeReminderIcon: {
@@ -43,7 +42,7 @@ export default StyleSheet.create({
   eventTitleText: {
     color: v.PRIMARY_TEXT_COLOR,
     fontSize: v.NORMAL_FONT_SIZE,
-    fontWeight: "700",
+    fontWeight: v.BOLD_FONT_WEIGHT,
     marginVertical: v.BASE_VALUE / 2
   },
 
