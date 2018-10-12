@@ -3,6 +3,15 @@
     "sdkVersion": "29.0.0",
     "assetBundlePatterns": [
       "assets/json/*"
-    ]
+    ],
+    "android": {
+      "package": "org.ggbygathering.mobile",
+      "config": {
+        "googleMaps": {
+          "apiKey" : "TBD"
+        }
+      },
+      "permissions":["ACCESS_FINE_LOCATION"]
+    }
   }
 }
