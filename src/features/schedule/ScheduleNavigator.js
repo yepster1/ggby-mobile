@@ -14,19 +14,19 @@ import styles from "./ScheduleNavigator.style";
 const ScheduleTabs = createMaterialTopTabNavigator(
   {
     UpcomingEvents: {
-      screen: props => <ScheduleContainer {...props} />,
+      screen: props => <ScheduleContainer filterBy="upcoming" {...props} />,
       navigationOptions: {
         title: "Upcoming"
       }
     },
     GoingEvents: {
-      screen: props => <ScheduleContainer {...props} />,
+      screen: props => <ScheduleContainer filterBy="going" {...props} />,
       navigationOptions: {
         title: "Going"
       }
     },
     PastEvents: {
-      screen: props => <ScheduleContainer {...props} />,
+      screen: props => <ScheduleContainer filterBy="past" {...props} />,
       navigationOptions: {
         title: "Past"
       }

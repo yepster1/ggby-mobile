@@ -8,20 +8,6 @@ import EventItemContainer from "./EventItemContainer";
 
 import styles from "./ScheduleView.style";
 
-const mockEventTimes = event => {
-  let seedTime = moment();
-
-  if (event.id % 2 === 0) {
-    seedTime = seedTime.add(1, "day");
-  }
-
-  return {
-    ...event,
-    startAt: seedTime.add(event.id, "hour").format(),
-    endAt: seedTime.add(event.id + 1, "hour").format()
-  };
-};
-
 class ScheduleView extends React.PureComponent {
   keyExtractor = ({ id }) => id.toString();
 
@@ -33,18 +19,15 @@ class ScheduleView extends React.PureComponent {
 
   renderEventItem = ({ item: event }) => <EventItemContainer event={event} />;
 
-  // TODO: Performance was shit on iOS X but fine otherwise -- may need to have
-  // someone else check as well to see if this is an issue that needs
-  // addressing. Also need to test with production version.
-  render() {
+  sectionListData = () => {
     const { events } = this.props;
 
     const groupByDate = ({ startAt }) =>
       moment(startAt).format("dddd, DD MMMM");
 
-    const groupedEvents = groupBy(groupByDate, map(mockEventTimes, events));
+    const groupedEvents = groupBy(groupByDate, events);
 
-    const sectionListData = map(
+    return map(
       title => ({
         title,
         key: title,
@@ -52,15 +35,25 @@ class ScheduleView extends React.PureComponent {
       }),
       keys(groupedEvents)
     );
+  };
+
+  render() {
+    const { events, emptyMessage } = this.props;
 
     return (
       <View style={styles.screen}>
-        <SectionList
-          sections={sectionListData}
-          keyExtractor={this.keyExtractor}
-          renderSectionHeader={this.renderSectionHeader}
-          renderItem={this.renderEventItem}
-        />
+        {events.length ? (
+          <SectionList
+            sections={this.sectionListData()}
+            keyExtractor={this.keyExtractor}
+            renderSectionHeader={this.renderSectionHeader}
+            renderItem={this.renderEventItem}
+          />
+        ) : (
+          <Text style={[styles.normalText, styles.emptyMessageText]}>
+            {emptyMessage}
+          </Text>
+        )}
       </View>
     );
   }

@@ -27,6 +27,7 @@ class EventItemContainer extends React.PureComponent {
 
   render() {
     const { event, eventReminder } = this.props;
+
     return (
       <EventItemView
         event={event}
@@ -45,8 +46,6 @@ const mapDispatchToProps = dispatch => ({
   scheduleEventReminder: event => dispatch(scheduleEventReminder(event)),
   cancelEventReminder: event => dispatch(cancelEventReminder(event))
 });
-
-console.log(scheduleEventReminder());
 
 export default connect(
   mapStateToProps,
