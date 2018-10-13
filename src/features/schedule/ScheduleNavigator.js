@@ -7,9 +7,10 @@ import {
 
 import defaultStackNavigatorConfigs from "components/navigator";
 import * as v from "theme/variables";
-import ScheduleContainer from "./ScheduleContainer";
-
 import styles from "./ScheduleNavigator.style";
+
+import ScheduleContainer from "./ScheduleContainer";
+import EventDetailsView from "./EventDetailsView";
 
 const ScheduleTabs = createMaterialTopTabNavigator(
   {
@@ -48,6 +49,9 @@ const ScheduleNavigator = createStackNavigator(
   {
     ScheduleTabs: {
       screen: ScheduleTabs
+    },
+    EventDetails: {
+      screen: EventDetailsView
     }
   },
   defaultStackNavigatorConfigs
