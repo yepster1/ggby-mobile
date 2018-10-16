@@ -1,22 +1,20 @@
 {
   "expo": {
     "sdkVersion": "30.0.0",
-
+    "privacy": "unlisted",
     "name": "GGBY TEST",
     "icon": "./assets/appicon/ggby-logo.png",
     "version": "1.0.0",
     "slug": "ggby-test",
-
     "ios": {
       "bundleIdentifier": "com.slacklineus.ggbytest"
     },
-
     "android": {
       "package": "com.slacklineus.ggbytest"
     },
-
     "assetBundlePatterns": [
       "assets/json/*"
-    ]
+    ],
+    "description": ""
   }
 }
