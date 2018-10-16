@@ -1,7 +1,8 @@
 import React from "react";
-// import moment from "moment";
-import { connect } from "react-redux";
+import { pipe } from "ramda";
 
+import { connect } from "react-redux";
+import { withNavigation } from "react-navigation";
 import { selectEventReminder } from "domain/eventReminders";
 
 import {
@@ -12,6 +13,11 @@ import {
 import EventItemView from "./EventItemView";
 
 class EventItemContainer extends React.PureComponent {
+  onEventPress = () => {
+    const { navigation, event } = this.props;
+    navigation.navigate("EventDetails", { event });
+  };
+
   onReminderIconPress = () => {
     const {
       event,
@@ -27,11 +33,13 @@ class EventItemContainer extends React.PureComponent {
 
   render() {
     const { event, eventReminder } = this.props;
+
     return (
       <EventItemView
         event={event}
         hasReminder={!!eventReminder}
         onReminderIconPress={this.onReminderIconPress}
+        onEventPress={this.onEventPress}
       />
     );
   }
@@ -46,9 +54,10 @@ const mapDispatchToProps = dispatch => ({
   cancelEventReminder: event => dispatch(cancelEventReminder(event))
 });
 
-console.log(scheduleEventReminder());
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+export default pipe(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  ),
+  withNavigation
 )(EventItemContainer);

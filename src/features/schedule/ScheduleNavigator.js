@@ -7,26 +7,27 @@ import {
 
 import defaultStackNavigatorConfigs from "components/navigator";
 import * as v from "theme/variables";
-import ScheduleContainer from "./ScheduleContainer";
-
 import styles from "./ScheduleNavigator.style";
+
+import ScheduleContainer from "./ScheduleContainer";
+import EventDetailsView from "./EventDetailsView";
 
 const ScheduleTabs = createMaterialTopTabNavigator(
   {
     UpcomingEvents: {
-      screen: props => <ScheduleContainer {...props} />,
+      screen: props => <ScheduleContainer filterBy="upcoming" {...props} />,
       navigationOptions: {
         title: "Upcoming"
       }
     },
     GoingEvents: {
-      screen: props => <ScheduleContainer {...props} />,
+      screen: props => <ScheduleContainer filterBy="going" {...props} />,
       navigationOptions: {
         title: "Going"
       }
     },
     PastEvents: {
-      screen: props => <ScheduleContainer {...props} />,
+      screen: props => <ScheduleContainer filterBy="past" {...props} />,
       navigationOptions: {
         title: "Past"
       }
@@ -48,6 +49,9 @@ const ScheduleNavigator = createStackNavigator(
   {
     ScheduleTabs: {
       screen: ScheduleTabs
+    },
+    EventDetails: {
+      screen: EventDetailsView
     }
   },
   defaultStackNavigatorConfigs

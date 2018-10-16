@@ -34,11 +34,18 @@ const reducer = handleActions(
 
 // SELECTORS
 
+const selectIndexedEventReminders = state => state.eventReminders.entities;
+
 const selectEventReminder = (state, eventId) =>
-  state.eventReminders.entities[eventId];
+  selectIndexedEventReminders(state)[eventId];
 
 // EXPORTS
 
 export default reducer;
 
-export { saveEventReminder, removeEventReminder, selectEventReminder };
+export {
+  saveEventReminder,
+  removeEventReminder,
+  selectIndexedEventReminders,
+  selectEventReminder
+};

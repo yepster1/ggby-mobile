@@ -3,7 +3,8 @@ import * as v from "theme/variables";
 
 export default StyleSheet.create({
   screen: {
-    backgroundColor: v.BACKGROUND_COLOR
+    backgroundColor: v.BACKGROUND_COLOR,
+    flex: 1
   },
 
   sectionHeaderContainer: {
@@ -27,5 +28,11 @@ export default StyleSheet.create({
     color: v.SECONDARY_TEXT_COLOR,
     fontSize: v.NORMAL_FONT_SIZE,
     marginVertical: v.BASE_VALUE / 2
+  },
+
+  emptyMessageText: {
+    marginVertical: v.BASE_VALUE * 2,
+    marginHorizontal: v.BASE_VALUE,
+    alignSelf: "center"
   }
 });
