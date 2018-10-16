@@ -1,9 +1,10 @@
 import React from "react";
-import configureStore from "store/configureStore";
 
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
-import RootNavigator from "features/rootNavigator";
+
+import RootNavigator from "./src/features/rootNavigator";
+import configureStore from "./src/store/configureStore";
 
 const { store, persistor } = configureStore();
 
