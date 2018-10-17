@@ -2,12 +2,12 @@ import React from "react";
 
 import { createBottomTabNavigator } from "react-navigation";
 
-import Schedule from "features/schedule";
-import Map from "features/map";
-import Info from "features/info";
+import Schedule from "../schedule";
+import Map from "../map";
+import Info from "../info";
 
-import TabBarIcon from "components/icons";
-import * as v from "theme/variables";
+import TabBarIcon from "../../components/icons";
+import * as v from "../../theme/variables";
 
 // NOTE: If the RootNavigator get any more complex (i.e.  accounts/registration
 // features) we'll probably want to move this into its own feature dir. For

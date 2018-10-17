@@ -11,7 +11,7 @@ import {
   saveEventReminder,
   removeEventReminder,
   selectEventReminder
-} from "domain/eventReminders";
+} from "../domain/eventReminders";
 
 const scheduleEventReminder = createAction(
   "SCHEDULE_EVENT_REMINDER",

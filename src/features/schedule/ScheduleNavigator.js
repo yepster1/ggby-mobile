@@ -5,8 +5,8 @@ import {
   createMaterialTopTabNavigator
 } from "react-navigation";
 
-import defaultStackNavigatorConfigs from "components/navigator";
-import * as v from "theme/variables";
+import defaultStackNavigatorConfigs from "../../components/navigator";
+import * as v from "../../theme/variables";
 import styles from "./ScheduleNavigator.style";
 
 import ScheduleContainer from "./ScheduleContainer";

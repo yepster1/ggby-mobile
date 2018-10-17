@@ -1,5 +1,5 @@
 import { handleActions } from "redux-actions";
-import bundledEvents from "json/events.json";
+import bundledEvents from "../../../assets/json/events.json";
 
 // REDUCER
 

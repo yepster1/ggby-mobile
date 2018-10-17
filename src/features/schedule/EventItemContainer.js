@@ -3,12 +3,13 @@ import { pipe } from "ramda";
 
 import { connect } from "react-redux";
 import { withNavigation } from "react-navigation";
-import { selectEventReminder } from "domain/eventReminders";
 
 import {
   scheduleEventReminder,
   cancelEventReminder
-} from "epics/eventReminders";
+} from "../../epics/eventReminders";
+
+import { selectEventReminder } from "../../domain/eventReminders";
 
 import EventItemView from "./EventItemView";
 
