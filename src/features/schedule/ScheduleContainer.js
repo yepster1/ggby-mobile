@@ -3,8 +3,8 @@ import moment from "moment";
 import { connect } from "react-redux";
 import { map, cond, equals, filter } from "ramda";
 
-import { selectEvents } from "domain/events";
-import { selectIndexedEventReminders } from "domain/eventReminders";
+import { selectEvents } from "../../domain/events";
+import { selectIndexedEventReminders } from "../../domain/eventReminders";
 
 import ScheduleView from "./ScheduleView";
 

@@ -3,8 +3,8 @@ import { createEpicMiddleware } from "redux-observable";
 import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
-import rootReducer from "domain";
-import rootEpic from "epics";
+import rootReducer from "../domain";
+import rootEpic from "../epics";
 
 const epicMiddleware = createEpicMiddleware();
 // eslint-disable-next-line no-underscore-dangle

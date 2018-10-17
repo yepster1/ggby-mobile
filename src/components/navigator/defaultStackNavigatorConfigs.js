@@ -2,7 +2,7 @@ import React from "react";
 
 import { Image } from "react-native";
 
-import * as v from "theme/variables";
+import * as v from "../../theme/variables";
 
 export default {
   headerLayoutPreset: "left",
@@ -21,7 +21,7 @@ export default {
             height: 30,
             resizeMode: "contain"
           }}
-          source={require("images/ggby-logo.png")}
+          source={require("../../../assets/images/ggby-logo.png")}
         />
         <Image
           style={{
@@ -30,7 +30,7 @@ export default {
             height: 25,
             resizeMode: "contain"
           }}
-          source={require("images/ggby-name.png")}
+          source={require("../../../assets/images/ggby-name.png")}
         />
       </React.Fragment>
     )
