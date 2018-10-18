@@ -34,10 +34,11 @@ const emptyMessageMap = {
   going:
     'No events have yet been marked as "going" 🤷.\n\nTo do so, head to the' +
     ' "Upcoming" tab 👈, take a look-see, and hit the alarm button for a 30' +
-    " minute reminder + to add to this list.\n\nYeeeeeeeees, raaage!! 🔥😈🔥🕺",
+    " minute reminder & to add to this list.\n\nSo pick some workshops and" +
+    " activities and let's raaaaage!",
   past:
-    "No events have yet past.\n\nAdventure abounds in the near future and" +
-    " we can't wait to meet all of you wonderful people 😁."
+    "Nothing's happened yet!\n\nAdventure abounds in the near future, get" +
+    " ready to meet some wonderful people 😁 !"
 };
 
 class ScheduleContainer extends React.Component {
