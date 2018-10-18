@@ -1,5 +1,5 @@
 import React from "react";
-import { Icon } from "expo";
+import { MaterialCommunityIcons as Icon } from "@expo/vector-icons";
 
 import * as v from "../../theme/variables";
 
@@ -8,7 +8,7 @@ export default class TabBarIcon extends React.Component {
     const { name, focused } = this.props;
 
     return (
-      <Icon.MaterialCommunityIcons
+      <Icon
         name={name}
         size={26}
         style={{ marginBottom: -3 }}
