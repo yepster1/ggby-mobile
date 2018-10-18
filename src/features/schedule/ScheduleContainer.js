@@ -27,7 +27,7 @@ const mockEventTimes = event => {
 const emptyMessageMap = {
   upcoming:
     "Wow. Looks like GGBY 2018 has come to an end.\n\nThank you so very" +
-    " much for coming 🙏🙏🙏-- we sincerly hope it 'twas the most incredible" +
+    " much for coming 🙏🙏🙏 we sincerly hope it 'twas the most incredible" +
     " of times for you.\n\n 🚶 Slack on!",
   interested:
     'No events have yet been marked as "interested" 🤷.\n\nTo do so, head to the' +
