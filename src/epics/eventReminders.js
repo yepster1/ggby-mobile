@@ -56,9 +56,9 @@ const scheduleEventReminderEpic = action$ =>
         mergeMap(() => {
           // TODO: Move static text content into i18n lib
           Alert.alert(
-            "Ohs Noes!!",
+            "Bummer!",
             "We can't notify you without permission. Please slide into your " +
-              "settings and flip that knob to the right. 😜🙏👽 Raaage oooon!"
+              "settings and flip that knob to the right. 😜🙏👽 Raaaage Ooonnnn!"
           );
 
           return empty();
