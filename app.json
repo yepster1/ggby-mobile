@@ -13,7 +13,9 @@
       "package": "com.slacklineus.ggbytest"
     },
     "assetBundlePatterns": [
-      "assets/json/*"
+      "assets/json/*",
+      "assets/images/*",
+      "node_modules/@expo/vector-icons/fonts/*"
     ],
     "description": ""
   }
