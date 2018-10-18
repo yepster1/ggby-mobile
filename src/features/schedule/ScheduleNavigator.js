@@ -20,10 +20,10 @@ const ScheduleTabs = createMaterialTopTabNavigator(
         title: "Upcoming"
       }
     },
-    GoingEvents: {
-      screen: props => <ScheduleContainer filterBy="going" {...props} />,
+    InterestedEvents: {
+      screen: props => <ScheduleContainer filterBy="interested" {...props} />,
       navigationOptions: {
-        title: "Going"
+        title: "Interested"
       }
     },
     PastEvents: {
