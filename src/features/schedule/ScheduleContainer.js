@@ -13,8 +13,6 @@ const mockEventTimes = event => {
 
   if (event.id === 1) {
     seedTime = seedTime.subtract(1, "day");
-  } else if (event.id === 2) {
-    seedTime = seedTime.subtract(2, "hours").add(1, "minute");
   } else if (event.id % 2 === 0) {
     seedTime = seedTime.add(1, "day");
   }
@@ -31,8 +29,8 @@ const emptyMessageMap = {
     "Wow. Looks like GGBY 2018 has come to an end.\n\nThank you so very" +
     " much for coming 🙏🙏🙏-- we sincerly hope it 'twas the most incredible" +
     " of times for you.\n\n 🚶 Slack on!",
-  going:
-    'No events have yet been marked as "going" 🤷.\n\nTo do so, head to the' +
+  interested:
+    'No events have yet been marked as "interested" 🤷.\n\nTo do so, head to the' +
     ' "Upcoming" tab 👈, take a look-see, and hit the alarm button for a 30' +
     " minute reminder & to add to this list.\n\nSo pick some workshops and" +
     " activities and let's raaaaage!",
@@ -56,7 +54,7 @@ class ScheduleContainer extends React.Component {
     switch (filterBy) {
       case "upcoming":
         return upcomingEvents;
-      case "going":
+      case "interested":
         return filter(e => indexedEventReminders[e.id], upcomingEvents);
       case "past":
         return filter(e => moment(e.startAt).isBefore(moment()), events);
