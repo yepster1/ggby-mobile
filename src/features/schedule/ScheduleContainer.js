@@ -13,6 +13,8 @@ const mockEventTimes = event => {
 
   if (event.id === 1) {
     seedTime = seedTime.subtract(1, "day");
+  } else if (event.id === 2) {
+    seedTime = seedTime.subtract(2, "hours").add(1, "minute");
   } else if (event.id % 2 === 0) {
     seedTime = seedTime.add(1, "day");
   }

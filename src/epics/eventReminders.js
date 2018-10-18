@@ -23,6 +23,20 @@ const cancelEventReminder = createAction(
   event => event
 );
 
+// TODO: Move static text content into i18n lib
+const reminderTitles = [
+  "Get ready to rage!",
+  "Scarf that sandwich!",
+  "Grab a quick power nap!",
+  "Get Ready!",
+  "Prepare yourselves!",
+  "Align your chakras!",
+  "Get Involved!",
+  "Finish those cosmic downloads!"
+];
+
+const sample = arr => arr[Math.floor(Math.random() * arr.length)];
+
 const scheduleEventReminderEpic = action$ =>
   action$.pipe(
     ofType(scheduleEventReminder.toString()),
@@ -44,7 +58,7 @@ const scheduleEventReminderEpic = action$ =>
           Alert.alert(
             "Ohs Noes!!",
             "We can't notify you without permission. Please slide into your " +
-              "settings and flip that shit to the right. 😜🙏👽 Raaage oooon!"
+              "settings and flip that knob to the right. 😜🙏👽 Raaage oooon!"
           );
 
           return empty();
@@ -58,7 +72,7 @@ const scheduleEventReminderEpic = action$ =>
             // TODO: Move static text content into i18n lib
             Notifications.scheduleLocalNotificationAsync(
               {
-                title: "Put down that splif!",
+                title: sample(reminderTitles),
                 body: `You've got 30 minutes till ${event.name}.`,
                 ios: { sound: true }
               },
