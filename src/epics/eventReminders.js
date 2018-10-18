@@ -11,7 +11,7 @@ import {
   saveEventReminder,
   removeEventReminder,
   selectEventReminder
-} from "domain/eventReminders";
+} from "../domain/eventReminders";
 
 const scheduleEventReminder = createAction(
   "SCHEDULE_EVENT_REMINDER",
@@ -22,6 +22,20 @@ const cancelEventReminder = createAction(
   "CANCEL_EVENT_REMINDER",
   event => event
 );
+
+// TODO: Move static text content into i18n lib
+const reminderTitles = [
+  "Get ready to rage!",
+  "Scarf that sandwich!",
+  "Grab a quick power nap!",
+  "Get Ready!",
+  "Prepare yourselves!",
+  "Align your chakras!",
+  "Get Involved!",
+  "Finish those cosmic downloads!"
+];
+
+const sample = arr => arr[Math.floor(Math.random() * arr.length)];
 
 const scheduleEventReminderEpic = action$ =>
   action$.pipe(
@@ -42,9 +56,9 @@ const scheduleEventReminderEpic = action$ =>
         mergeMap(() => {
           // TODO: Move static text content into i18n lib
           Alert.alert(
-            "Ohs Noes!!",
+            "Bummer!",
             "We can't notify you without permission. Please slide into your " +
-              "settings and flip that shit to the right. 😜🙏👽 Raaage oooon!"
+              "settings and flip that knob to the right. 😜🙏👽 Raaaage Ooonnnn!"
           );
 
           return empty();
@@ -58,7 +72,7 @@ const scheduleEventReminderEpic = action$ =>
             // TODO: Move static text content into i18n lib
             Notifications.scheduleLocalNotificationAsync(
               {
-                title: "Put down that splif!",
+                title: sample(reminderTitles),
                 body: `You've got 30 minutes till ${event.name}.`,
                 ios: { sound: true }
               },

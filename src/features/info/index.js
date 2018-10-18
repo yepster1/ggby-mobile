@@ -2,7 +2,7 @@ import React from "react";
 
 import { createStackNavigator } from "react-navigation";
 import { View, Text } from "react-native";
-import defaultStackNavigatorConfigs from "components/navigator";
+import defaultStackNavigatorConfigs from "../../components/navigator";
 
 const InfoScreen = () => (
   <View>

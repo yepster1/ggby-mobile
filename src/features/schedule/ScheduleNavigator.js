@@ -5,8 +5,8 @@ import {
   createMaterialTopTabNavigator
 } from "react-navigation";
 
-import defaultStackNavigatorConfigs from "components/navigator";
-import * as v from "theme/variables";
+import defaultStackNavigatorConfigs from "../../components/navigator";
+import * as v from "../../theme/variables";
 import styles from "./ScheduleNavigator.style";
 
 import ScheduleContainer from "./ScheduleContainer";
@@ -20,10 +20,10 @@ const ScheduleTabs = createMaterialTopTabNavigator(
         title: "Upcoming"
       }
     },
-    GoingEvents: {
-      screen: props => <ScheduleContainer filterBy="going" {...props} />,
+    InterestedEvents: {
+      screen: props => <ScheduleContainer filterBy="interested" {...props} />,
       navigationOptions: {
-        title: "Going"
+        title: "Interested"
       }
     },
     PastEvents: {
