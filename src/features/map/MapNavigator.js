@@ -6,10 +6,18 @@ import defaultStackNavigatorConfigs from "components/navigator";
 
 import { MapView } from 'expo';
 import { Overlay } from 'react-native-maps';
-import fruitbowl from '../assets/images/fruit-bowl.png';
+import fruitbowl from 'images/fruit-bowl.png';
+
+import mapDetails from "json/map.json";
 
 this.state = {
-  overlay_bounds: [[47.643854,-122.308841],[47.640853,-122.303558]],
+  overlay_bounds: [mapDetails.bounds.topLeft,mapDetails.bounds.bottomRight],
+  center: {
+    latitude: (mapDetails.bounds.topLeft[0] + mapDetails.bounds.bottomRight[0])/2,
+    longitude: (mapDetails.bounds.topLeft[1] + mapDetails.bounds.bottomRight[1])/2,
+    latitudeDelta: Math.abs(mapDetails.bounds.bottomRight[0] - mapDetails.bounds.topLeft[0]),
+    longitudeDelta: Math.abs(mapDetails.bounds.bottomRight[1] - mapDetails.bounds.topLeft[1])
+  }
 };
 
 Expo.Permissions.getAsync(Expo.Permissions.LOCATION);
@@ -17,12 +25,7 @@ Expo.Permissions.getAsync(Expo.Permissions.LOCATION);
 const Map = () => (
   <MapView
     style={{ flex: 1 }}
-    region={{
-      latitude: 47.642234,
-      longitude: -122.305725,
-      latitudeDelta: 0.004,
-      longitudeDelta: 0.005,
-    }}
+    region={this.state.center}
     showsUserLocation={true}
     showsMyLocationButton={true}
   >
