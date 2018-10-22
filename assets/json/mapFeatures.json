@@ -1,0 +1,58 @@
+{
+    "metadata": {
+        "mapBounds": {
+            "upperLeft": {
+                "lat": 0.0,
+                "lon": 0.0
+            },
+            "lowerRight": {
+                "lat": 1.0,
+                "lon": 1.0
+            }
+        }
+    },
+    "features" : 
+    {
+        "highlines": 
+        {
+            "metadata":{
+                "featureType": "polyline",
+                "iconPath": "path/to/icon",
+            },
+            "highlinesList": [
+                {
+                    "metadata": 
+                    {
+                        "name": "Dean's Lines",
+                        "length": "130ft",
+                        "details": "Might Cut This",
+                    },
+                    "featurePoints":
+                    [
+                        {
+                            "lat": 0.0,
+                            "lon": 0.0
+                        },
+                        {
+                            "lat": 0.5,
+                            "lon": -0.5
+                        },
+                    ]
+                }
+            ]
+        },
+        "lowlines": {},
+        "spaceNet": {},
+        "port-a-potties": {},
+        "emergencyToilets": {},
+        "mainFirePit": {},
+        "auxiliaryFirePit": {},
+        "campsites": {},
+        "medicalTent": {},
+        "generalParkingLots": {},
+        "vanLifeParkingLot": {},
+        "checkin": {},
+        "walkingPaths": {},
+        "workshopZones":{},
+    }
+}
