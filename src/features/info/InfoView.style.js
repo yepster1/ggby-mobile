@@ -3,7 +3,25 @@ import { StyleSheet } from "react-native";
 import * as v from "../../theme/variables";
 
 export default StyleSheet.create({
-  contentContainer: {},
+  tableOfContents: {
+    borderLeftWidth: 3,
+    borderColor: v.ACCENT_COLOR,
+    marginLeft: v.BASE_VALUE,
+    paddingHorizontal: v.BASE_VALUE
+  },
+
+  tocTextTitle: {
+    fontWeight: v.BOLD_FONT_WEIGHT,
+    color: v.PRIMARY_TEXT_COLOR,
+    fontSize: v.NORMAL_FONT_SIZE,
+    marginVertical: v.BASE_VALUE / 4
+  },
+
+  tocText: {
+    color: v.PRIMARY_TEXT_COLOR,
+    fontSize: v.NORMAL_FONT_SIZE,
+    marginVertical: v.BASE_VALUE / 4
+  },
 
   primaryHeading: {
     marginHorizontal: v.BASE_VALUE,
