@@ -103,11 +103,13 @@ function formatData(res) {
     times.shift();
 
     var json = "{\n"
+    var counter = 1;
     for (var i = dateRow+1; i < times.length + 1; i++) {
       for(var j = timeCollumn+1; j < dates.length + 1; j++) {
         if (data[i][j] != "" && data[i][j] != undefined) {
-          jsonFormatter = "\t{\n\t\t\"Date\": \"%s\",\n\t\t\"Times\": \"%s\",\n\t\t\"Title\": \"%s\",\n\t\t\"Details\": \"%s\",\n\t\t\"PicUrl\": \"%s\",\n\t\t\"Location\": \"%s\"\n\t},\n"
-          json += util.format(jsonFormatter, dates[j-1], times[i-1], data[i][j], '', '', '')
+          data[i][j] = data[i][j].replace(/(\r\n\t|\n|\r\t)/gm,"");
+          jsonFormatter = "\t{\n\t\t\"id\": %d,\n\t\t\"date\": \"%s\",\n\t\t\"Times\": \"%s\",\n\t\t\"Title\": \"%s\",\n\t\t\"Details\": \"%s\",\n\t\t\"PicUrl\": \"%s\",\n\t\t\"Location\": \"%s\"\n\t},\n"
+          json += util.format(jsonFormatter, counter++, dates[j-1], times[i-1], data[i][j], '', '', '')
         }
       }
     }
