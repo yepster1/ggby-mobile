@@ -13,7 +13,6 @@ class InfoView extends React.Component {
   };
 
   indexSectionPosition = index => ({ nativeEvent: { layout } }) => {
-    console.log(layout);
     this.positions[index] = layout.y;
   };
 
@@ -29,11 +28,26 @@ class InfoView extends React.Component {
 
           <View style={styles.tableOfContents}>
             <Text style={styles.tocTextTitle}>Table of Contents</Text>
-            <Text style={styles.tocText}>First Timers</Text>
-            <Text style={styles.tocText}>Logistics & Essentials</Text>
-            <Text style={styles.tocText}>Spirit & Values</Text>
-            <Text style={styles.tocText}>Getting to the Fruit Bowl</Text>
-            <Text style={styles.tocText}>Town Services</Text>
+
+            <TouchableOpacity onPress={this.scrollToSection("first-timers")}>
+              <Text style={styles.tocText}>First Timers</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress={this.scrollToSection("logistics")}>
+              <Text style={styles.tocText}>Logistics & Essentials</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress={this.scrollToSection("spirit")}>
+              <Text style={styles.tocText}>Spirit & Values</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress={this.scrollToSection("getting-there")}>
+              <Text style={styles.tocText}>Getting to the Fruit Bowl</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress={this.scrollToSection("town-services")}>
+              <Text style={styles.tocText}>Town Services</Text>
+            </TouchableOpacity>
 
             <TouchableOpacity onPress={this.scrollToSection("history")}>
               <Text style={styles.tocText}>History</Text>
@@ -41,15 +55,23 @@ class InfoView extends React.Component {
           </View>
         </View>
 
-        <View>
+        <View onLayout={this.indexSectionPosition("first-timers")}>
           <Text style={styles.primaryHeading}>First Timers</Text>
         </View>
 
-        <Text style={styles.primaryHeading}>Logistics & Essentials</Text>
-        <Text style={styles.primaryHeading}>Spirit & Values</Text>
-        <Text style={styles.primaryHeading}>Getting to the Fruit Bowl</Text>
+        <View onLayout={this.indexSectionPosition("logistics")}>
+          <Text style={styles.primaryHeading}>Logistics & Essentials</Text>
+        </View>
 
-        <View>
+        <View onLayout={this.indexSectionPosition("spirit")}>
+          <Text style={styles.primaryHeading}>Spirit & Values</Text>
+        </View>
+
+        <View onLayout={this.indexSectionPosition("getting-there")}>
+          <Text style={styles.primaryHeading}>Getting to the Fruit Bowl</Text>
+        </View>
+
+        <View onLayout={this.indexSectionPosition("town-services")}>
           <Text style={styles.primaryHeading}>Town Services</Text>
 
           <Text style={styles.secondaryHeading}>
