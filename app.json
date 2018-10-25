@@ -2,21 +2,21 @@
   "expo": {
     "sdkVersion": "30.0.0",
     "privacy": "unlisted",
-    "name": "GGBY TEST",
+    "name": "GGBY Preview",
     "icon": "./assets/appicon/ggby-logo.png",
     "version": "1.0.0",
-    "slug": "ggby-test",
+    "slug": "ggby-preview",
     "ios": {
-      "bundleIdentifier": "com.slacklineus.ggbytest"
+      "bundleIdentifier": "com.slacklineus.ggbypreview"
     },
     "android": {
-      "package": "com.slacklineus.ggbytest"
+      "package": "com.slacklineus.ggbypreview"
     },
     "assetBundlePatterns": [
       "assets/json/*",
       "assets/images/*",
       "node_modules/@expo/vector-icons/fonts/*"
     ],
-    "description": ""
+    "description": "GGBY (Gobble Gobble Bitches Yeah) is the slackline festival in Moab, UT! We've been here every Thanksgiving for over 10 years. This is your guide the experience of a lifetime."
   }
 }
