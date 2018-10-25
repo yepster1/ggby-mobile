@@ -102,18 +102,19 @@ function formatData(res) {
     dates.shift();
     times.shift();
 
-    var json = "{\n"
+    var json = "[\n"
     var counter = 1;
     for (var i = dateRow+1; i < times.length + 1; i++) {
       for(var j = timeCollumn+1; j < dates.length + 1; j++) {
         if (data[i][j] != "" && data[i][j] != undefined) {
-          data[i][j] = data[i][j].replace(/(\r\n\t|\n|\r\t)/gm,"");
-          jsonFormatter = "\t{\n\t\t\"id\": %d,\n\t\t\"date\": \"%s\",\n\t\t\"Times\": \"%s\",\n\t\t\"Title\": \"%s\",\n\t\t\"Details\": \"%s\",\n\t\t\"PicUrl\": \"%s\",\n\t\t\"Location\": \"%s\"\n\t},\n"
+          data[i][j] = data[i][j].replace(/(\r\n\t|\n|\r\t)/gm," ");
+          data[i][j] = data[i][j].charAt(0) + data[i][j].slice(1).toLowerCase()
+          jsonFormatter = "\t{\n\t\t\"id\": %d,\n\t\t\"date\": \"%s\",\n\t\t\"times\": \"%s\",\n\t\t\"title\": \"%s\",\n\t\t\"details\": \"%s\",\n\t\t\"picUrl\": \"%s\",\n\t\t\"location\": \"%s\"\n\t},\n"
           json += util.format(jsonFormatter, counter++, dates[j-1], times[i-1], data[i][j], '', '', '')
         }
       }
     }
-    json += "}"
+    json += "]"
     console.log(json)
     fs.writeFile(storeLocation, json, function(err) {
     if(err) {
