@@ -1,340 +1,344 @@
-{
+[
 	{
-		"Date": "Thursday, 22nd",
-		"Times": "BREAKFAST 8:00-10:00 AM",
-		"Title": "BREAKFAST 
-W/ SARAH & DAMON",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 1,
+		"date": "Thursday, 22nd",
+		"times": "BREAKFAST 8:00-10:00 AM",
+		"title": "Breakfast  w/ sarah & damon",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Monday, 19th",
-		"Times": "9:00 AM",
-		"Title": "BREATH AND MOVEMENT
-GROUP ENGAGMENT",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 2,
+		"date": "Monday, 19th",
+		"times": "9:00 AM",
+		"title": "Breath and movement group engagment",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Tuesday, 20th",
-		"Times": "9:00 AM",
-		"Title": "VINYASA 
-W/ JESS",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 3,
+		"date": "Tuesday, 20th",
+		"times": "9:00 AM",
+		"title": "Vinyasa  w/ jess",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Wednesday, 21st",
-		"Times": "9:00 AM",
-		"Title": "STRENGTH & RECOVERY
-W/ MICHELLE",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 4,
+		"date": "Wednesday, 21st",
+		"times": "9:00 AM",
+		"title": "Strength & recovery w/ michelle",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Thursday, 22nd",
-		"Times": "9:00 AM",
-		"Title": "POWER YOGA 
-W/ LIZ G.",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 5,
+		"date": "Thursday, 22nd",
+		"times": "9:00 AM",
+		"title": "Power yoga  w/ liz g.",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Friday, 23rd",
-		"Times": "9:00 AM",
-		"Title": "MORNING MOVEMENT
-W/ LOUIE",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 6,
+		"date": "Friday, 23rd",
+		"times": "9:00 AM",
+		"title": "Morning movement w/ louie",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Tuesday, 20th",
-		"Times": "10:00 AM",
-		"Title": "MINDFUL BREATHING
-W/ DANI",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 7,
+		"date": "Tuesday, 20th",
+		"times": "10:00 AM",
+		"title": "Mindful breathing w/ dani",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Thursday, 22nd",
-		"Times": "10:00 AM",
-		"Title": "MEDITATION 
-W/ ",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 8,
+		"date": "Thursday, 22nd",
+		"times": "10:00 AM",
+		"title": "Meditation  w/ ",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Monday, 19th",
-		"Times": "11:00 AM",
-		"Title": "MOUNTING THE LINE
-W/ LIZ THOMAS",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 9,
+		"date": "Monday, 19th",
+		"times": "11:00 AM",
+		"title": "Mounting the line w/ liz thomas",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Tuesday, 20th",
-		"Times": "11:00 AM",
-		"Title": "HIGHLINE PRANAYAMA 
-W/ BROOKE",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 10,
+		"date": "Tuesday, 20th",
+		"times": "11:00 AM",
+		"title": "Highline pranayama  w/ brooke",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Wednesday, 21st",
-		"Times": "11:00 AM",
-		"Title": "INTRO TO HIGHLINE
-W/ DANY AND LOUIE",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 11,
+		"date": "Wednesday, 21st",
+		"times": "11:00 AM",
+		"title": "Intro to highline w/ dany and louie",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Thursday, 22nd",
-		"Times": "11:00 AM",
-		"Title": "MONOLITHIC BOUNCE
-W/ ZAC AND FRIEDI",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 12,
+		"date": "Thursday, 22nd",
+		"times": "11:00 AM",
+		"title": "Monolithic bounce w/ zac and friedi",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Friday, 23rd",
-		"Times": "11:00 AM",
-		"Title": "RIGGING ANALYSIS
-W/ JERRY AND ZAC",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 13,
+		"date": "Friday, 23rd",
+		"times": "11:00 AM",
+		"title": "Rigging analysis w/ jerry and zac",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Monday, 19th",
-		"Times": "1:00 PM",
-		"Title": "SLACKRO 
-W/ MICHELLE, ALEX, BRIAN",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 14,
+		"date": "Monday, 19th",
+		"times": "1:00 PM",
+		"title": "Slackro  w/ michelle, alex, brian",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Tuesday, 20th",
-		"Times": "1:00 PM",
-		"Title": "INVERSIONS IN ACRO W/ LOUIE
-DANI & RACHEL",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 15,
+		"date": "Tuesday, 20th",
+		"times": "1:00 PM",
+		"title": "Inversions in acro w/ louie dani & rachel",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Wednesday, 21st",
-		"Times": "1:00 PM",
-		"Title": "ACRO DANCE 
-W/ LEILA AND ANDREW",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 16,
+		"date": "Wednesday, 21st",
+		"times": "1:00 PM",
+		"title": "Acro dance  w/ leila and andrew",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Thursday, 22nd",
-		"Times": "1:00 PM",
-		"Title": "ARM BALANCE 
-W/ RACHEL AND LOUIE",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 17,
+		"date": "Thursday, 22nd",
+		"times": "1:00 PM",
+		"title": "Arm balance  w/ rachel and louie",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Friday, 23rd",
-		"Times": "1:00 PM",
-		"Title": "GROUP MOVEMENT SHARE
-SLACKROTOPIA",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 18,
+		"date": "Friday, 23rd",
+		"times": "1:00 PM",
+		"title": "Group movement share slackrotopia",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Monday, 19th",
-		"Times": "2:00 PM",
-		"Title": "GUIDED JAM W/ SLACKLINE 
-JOSH",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 19,
+		"date": "Monday, 19th",
+		"times": "2:00 PM",
+		"title": "Guided jam w/ slackline  josh",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Wednesday, 21st",
-		"Times": "2:00 PM",
-		"Title": "TANDEM SLACKLINE W/
-MICHELLE & JOSH",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 20,
+		"date": "Wednesday, 21st",
+		"times": "2:00 PM",
+		"title": "Tandem slackline w/ michelle & josh",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Friday, 23rd",
-		"Times": "2:00 PM",
-		"Title": "GUIDED JAM W/ SLACKLINE 
-JOSH",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 21,
+		"date": "Friday, 23rd",
+		"times": "2:00 PM",
+		"title": "Guided jam w/ slackline  josh",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Monday, 19th",
-		"Times": "3:00 PM",
-		"Title": "
-DNAce iMprovisation 
-The`art W/ BIANCA & RJ",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 22,
+		"date": "Monday, 19th",
+		"times": "3:00 PM",
+		"title": " dnace improvisation  the`art w/ bianca & rj",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Tuesday, 20th",
-		"Times": "3:00 PM",
-		"Title": "COSMIC PLAY
-W/ ANNA & MELISSA",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 23,
+		"date": "Tuesday, 20th",
+		"times": "3:00 PM",
+		"title": "Cosmic play w/ anna & melissa",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Wednesday, 21st",
-		"Times": "3:00 PM",
-		"Title": "SHIBARI 
-W/ SARA, MAD, JER, KALI",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 24,
+		"date": "Wednesday, 21st",
+		"times": "3:00 PM",
+		"title": "Shibari  w/ sara, mad, jer, kali",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Thursday, 22nd",
-		"Times": "3:00 PM",
-		"Title": "TRIBAL DANCE 
-W/ LEILA & ANDREW",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 25,
+		"date": "Thursday, 22nd",
+		"times": "3:00 PM",
+		"title": "Tribal dance  w/ leila & andrew",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Friday, 23rd",
-		"Times": "3:00 PM",
-		"Title": "THAI MASSAGE 
-W/ PAULINA",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 26,
+		"date": "Friday, 23rd",
+		"times": "3:00 PM",
+		"title": "Thai massage  w/ paulina",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Monday, 19th",
-		"Times": "5:00 PM",
-		"Title": "THERAPUETIC HIGHLINES
-W/ WILL",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 27,
+		"date": "Monday, 19th",
+		"times": "5:00 PM",
+		"title": "Therapuetic highlines w/ will",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Tuesday, 20th",
-		"Times": "5:00 PM",
-		"Title": "SLACKLINE US & ISA
-W/ RACHEL & ZAC TIMMONS?",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 28,
+		"date": "Tuesday, 20th",
+		"times": "5:00 PM",
+		"title": "Slackline us & isa w/ rachel & zac timmons?",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Wednesday, 21st",
-		"Times": "5:00 PM",
-		"Title": "BLM TALK
-CATHY?",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 29,
+		"date": "Wednesday, 21st",
+		"times": "5:00 PM",
+		"title": "Blm talk cathy?",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Thursday, 22nd",
-		"Times": "5:00 PM",
-		"Title": "SELF CARE IS HEALTH CARE
-W/ LOUIE AND PAULINA",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 30,
+		"date": "Thursday, 22nd",
+		"times": "5:00 PM",
+		"title": "Self care is health care w/ louie and paulina",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Friday, 23rd",
-		"Times": "5:00 PM",
-		"Title": "CONSCIOUS AND SUSTAINABLE
- LIVING W/ ASHLEY",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 31,
+		"date": "Friday, 23rd",
+		"times": "5:00 PM",
+		"title": "Conscious and sustainable  living w/ ashley",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Tuesday, 20th",
-		"Times": "DINNER 6:00-7:00 PM",
-		"Title": "SUNSET OM CIRCLE W/ DANY B.",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 32,
+		"date": "Tuesday, 20th",
+		"times": "DINNER 6:00-7:00 PM",
+		"title": "Sunset om circle w/ dany b.",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Thursday, 22nd",
-		"Times": "DINNER 6:00-7:00 PM",
-		"Title": "THANKSGIVING POTLUCK",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 33,
+		"date": "Thursday, 22nd",
+		"times": "DINNER 6:00-7:00 PM",
+		"title": "Thanksgiving potluck",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Monday, 19th",
-		"Times": "8:00 PM",
-		"Title": "FIRE / FIRE SPINNING & 
-HISTORY OF GGBY W/ TERRY",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 34,
+		"date": "Monday, 19th",
+		"times": "8:00 PM",
+		"title": "Fire / fire spinning &  history of ggby w/ terry",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Tuesday, 20th",
-		"Times": "8:00 PM",
-		"Title": "MOVIE NIGHT",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 35,
+		"date": "Tuesday, 20th",
+		"times": "8:00 PM",
+		"title": "Movie night",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Wednesday, 21st",
-		"Times": "8:00 PM",
-		"Title": "TALENT SHOW",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 36,
+		"date": "Wednesday, 21st",
+		"times": "8:00 PM",
+		"title": "Talent show",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Thursday, 22nd",
-		"Times": "8:00 PM",
-		"Title": "SLACKLIFE BC DANCE
-PARTY",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 37,
+		"date": "Thursday, 22nd",
+		"times": "8:00 PM",
+		"title": "Slacklife bc dance party",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
 	{
-		"Date": "Friday, 23rd",
-		"Times": "8:00 PM",
-		"Title": "FIRE CEREMONY",
-		"Details": "",
-		"PicUrl": "",
-		"Location": ""
+		"id": 38,
+		"date": "Friday, 23rd",
+		"times": "8:00 PM",
+		"title": "Fire ceremony",
+		"details": "",
+		"picUrl": "",
+		"location": ""
 	},
-}
+]
